@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+</head>
+<body>
+    <h1>Guessing Game</h1>
+
+<label for="uguess">Guess the Number:</label>
+<ul></ul>
+    <input
+    type="text"
+    name="uguess"
+    id="guess1"
+    placeholder="Enter a Number">
+    <input type="button" value="Guess" id="submitbutton" placeholder="Submit" onclick="playerGuess()">
+<script>
+
+        var secretNum = Math.floor(Math.random() * 101)
+        console.log(secretNum)
+    function playerGuess(){
+        let guess = document.getElementById("guess1").value;
+        if (guess == secretNum){
+            alert("You are Correct!");
+            
+        } else if (guess > secretNum) {
+            alert("Guess Lower")
+        } else if (guess < secretNum) {
+                alert("Guess Higher")
+        }
+        else{
+            alert("You are Wrong!");
+        }
+    }  
+</script>
+</body>
+</html>
